@@ -55,32 +55,52 @@ export const Hero = ({ onBook }: { onBook?: () => void }) => {
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-16 max-w-5xl mx-auto w-full"
         >
-          <div className="inline-flex items-center justify-center gap-2 mb-12 bg-white/80 backdrop-blur-md px-6 py-3 rounded-full shadow-lg border border-white/50">
-            <div className="flex gap-1">
+          <div className="inline-flex items-center justify-center gap-3 mb-16 bg-white shadow-2xl px-8 py-4 rounded-3xl md:rounded-full border border-brand-gold/20 flex-col md:flex-row text-center md:text-left">
+            <div className="flex gap-1.5">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-brand-gold text-brand-gold" />
+                <Star key={i} className="w-6 h-6 fill-brand-gold text-brand-gold drop-shadow-sm" />
               ))}
             </div>
-            <span className="text-sm font-bold text-brand-dark ml-2 tracking-wide">5.0 Rating from 200+ Clients</span>
+            <div className="hidden md:block w-px h-6 bg-brand-dark/20 mx-2"></div>
+            <div className="flex flex-col">
+              <span className="text-base font-black text-brand-dark leading-none">5.0 Star Rating</span>
+              <span className="text-[11px] font-bold text-brand-muted uppercase tracking-widest mt-1">From 200+ Happy Clients</span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {REVIEWS.slice(0, 3).map((review) => (
               <div
                 key={review.id}
-                className="glass-card p-8 rounded-3xl text-left flex flex-col justify-between h-full min-h-[240px] hover:border-brand-gold/30 transition-all duration-500 hover:-translate-y-1"
+                className="bg-white/95 backdrop-blur-xl p-8 rounded-3xl text-left flex flex-col justify-between h-full min-h-[240px] shadow-xl border border-white hover:border-brand-gold/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden"
               >
-                <div>
-                  <div className="flex gap-1 mb-6">
+                <div className="absolute -top-4 -right-2 text-9xl text-brand-gold/10 font-serif leading-none select-none">
+                  "
+                </div>
+
+                <div className="relative z-10">
+                  <div className="flex gap-1.5 mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 fill-brand-gold text-brand-gold" />
+                      <Star key={i} className="w-5 h-5 fill-brand-gold text-brand-gold drop-shadow-sm" />
                     ))}
                   </div>
-                  <p className="text-sm italic text-brand-muted leading-relaxed">"{review.text}"</p>
+                  <p className="text-base text-brand-dark leading-relaxed font-medium">"{review.text}"</p>
                 </div>
-                <div className="flex items-center justify-between pt-6 border-t border-brand-dark/5">
-                  <span className="text-xs font-bold uppercase tracking-widest">{review.author}</span>
-                  <span className="text-[10px] text-brand-gold font-black uppercase tracking-tighter">{review.source}</span>
+
+                <div className="flex items-center justify-between pt-6 mt-6 border-t border-brand-dark/10 relative z-10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-dark font-serif font-bold text-lg">
+                      {review.author[0]}
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-brand-dark">{review.author}</span>
+                      <span className="text-[10px] text-brand-muted uppercase tracking-wider flex items-center gap-1 mt-0.5">
+                        <svg className="w-3 h-3 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
+                        Verified
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-[10px] text-brand-gold font-black uppercase tracking-widest bg-brand-gold/10 px-3 py-1.5 rounded-full">{review.source}</span>
                 </div>
               </div>
             ))}
