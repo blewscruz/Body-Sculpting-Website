@@ -7,7 +7,7 @@ export const SERVICES: Service[] = [
     category: 'main',
     description: 'The Ultimate Fat Melting & Sculpting Package.',
     details: 'A powerful combination of Ultrasound Cavitation, Radio Frequency (RF), Vacuum Therapy, Colombian Wood Therapy, and Brazilian Lymphatic Drainage.',
-    image: 'https://picsum.photos/seed/sculpt1/800/600'
+    image: '/images/cavitation-sculpt.png'
   },
   {
     id: 'signature',
@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
     category: 'main',
     description: 'The Tone & Detox Package.',
     details: 'Focuses on contouring and detoxification using Brazilian Lymphatic Drainage and Colombian Wood Therapy.',
-    image: 'https://picsum.photos/seed/sculpt2/800/600'
+    image: '/images/signature-sculpt.png'
   },
   {
     id: 'lymphatic',
@@ -23,7 +23,7 @@ export const SERVICES: Service[] = [
     category: 'main',
     description: 'Instant slimming and immune boost.',
     details: 'Reduces bloat, boosts the immune system, and provides an immediate slimming effect through specialized manual techniques.',
-    image: 'https://picsum.photos/seed/sculpt3/800/600'
+    image: '/images/lymphatic-drainage.png'
   },
   {
     id: 'post-op',
@@ -31,7 +31,7 @@ export const SERVICES: Service[] = [
     category: 'main',
     description: 'Essential recovery for BBL & Lipo.',
     details: 'Crucial for patient safety, preventing seromas, and speeding up recovery after surgical procedures like BBL or Liposuction.',
-    image: 'https://picsum.photos/seed/sculpt4/800/600'
+    image: '/images/post-op-drainage.png'
   },
   {
     id: 'rf-facial',
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
     category: 'addon',
     description: 'Anti-aging & Collagen boost.',
     details: 'Uses radio frequency to stimulate collagen production for a firmer, more youthful appearance.',
-    image: 'https://picsum.photos/seed/facial/800/600'
+    image: '/images/rf-facial.png'
   },
   {
     id: 'vacuum-butt',
@@ -47,7 +47,7 @@ export const SERVICES: Service[] = [
     category: 'addon',
     description: 'Non-invasive BBL effect.',
     details: 'Plumps and tones the glutes using vacuum suction for a lifted, firmer look without surgery.',
-    image: 'https://picsum.photos/seed/butt/800/600'
+    image: '/images/vacuum-butt.png'
   },
   {
     id: 'sauna-blanket',
@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
     category: 'addon',
     description: 'Detox & Calorie burn.',
     details: 'Deep relaxation while burning calories and flushing toxins through infrared heat.',
-    image: 'https://picsum.photos/seed/sauna/800/600'
+    image: '/images/sauna-blanket.png'
   }
 ];
 

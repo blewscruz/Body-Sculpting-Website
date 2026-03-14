@@ -3,45 +3,40 @@ import { motion } from 'motion/react';
 
 export const Gallery = () => {
   const images = [
-    'https://picsum.photos/seed/ba1/600/800',
-    'https://picsum.photos/seed/ba2/600/800',
-    'https://picsum.photos/seed/ba3/600/800',
-    'https://picsum.photos/seed/ba4/600/800',
-    'https://picsum.photos/seed/ba5/600/800',
-    'https://picsum.photos/seed/ba6/600/800',
+    '/images/gallery-1.jpg',
+    '/images/gallery-2.jpg',
+    '/images/gallery-3.jpg',
+    '/images/gallery-4.jpg',
+    '/images/gallery-5.jpg',
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-brand-beige">
+    <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-serif mb-4">Real Results</h2>
           <p className="text-brand-muted text-sm">A glimpse into the transformations our clients experience.</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="flex flex-wrap justify-center gap-4 max-w-7xl mx-auto">
           {images.map((img, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="aspect-[3/4] rounded-2xl overflow-hidden group relative"
+              className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[calc(20%-1rem)] rounded-2xl overflow-hidden group"
             >
-              <img 
-                src={img} 
-                alt={`Transformation ${index + 1}`} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                referrerPolicy="no-referrer"
+              <img
+                src={img}
+                alt={`Transformation ${index + 1}`}
+                className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-500 origin-center"
               />
-              <div className="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="text-white text-[10px] uppercase tracking-widest font-bold">View Result</span>
-              </div>
             </motion.div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
           <p className="text-xs text-brand-muted italic">
             *Results vary by individual. Consistency and aftercare are key to optimal outcomes.

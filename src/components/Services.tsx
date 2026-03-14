@@ -8,32 +8,32 @@ export const Services = () => {
   const addOns = SERVICES.filter(s => s.category === 'addon');
 
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-serif mb-4">Signature Treatments</h2>
           <div className="w-20 h-px bg-brand-gold mx-auto mb-6"></div>
           <p className="text-brand-muted max-w-xl mx-auto">
-            Scientifically-backed, non-invasive procedures designed to detoxify, 
+            Scientifically-backed, non-invasive procedures designed to detoxify,
             contour, and rejuvenate your body.
           </p>
         </div>
 
         {/* Main Services */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
           {mainServices.map((service, index) => (
-            <motion.div 
+            <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group flex flex-col md:flex-row gap-8 items-center"
+              className="group flex flex-col md:flex-row gap-8 lg:gap-12 items-center"
             >
               <div className="w-full md:w-1/2 aspect-[4/5] overflow-hidden rounded-3xl">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
+                <img
+                  src={service.image}
+                  alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
@@ -55,12 +55,12 @@ export const Services = () => {
         </div>
 
         {/* Add-ons */}
-        <div className="bg-brand-beige rounded-[3rem] p-12 md:p-20">
-          <div className="text-center mb-16">
+        <div className="bg-brand-beige rounded-[3rem] p-10 md:p-16">
+          <div className="text-center mb-12">
             <h3 className="text-3xl font-serif mb-2">Premium Add-Ons</h3>
-            <p className="text-brand-muted text-sm">Enhance your results with these specialized treatments.</p>
+            <p className="text-brand-muted text-sm max-w-xl mx-auto">Enhance your results with these specialized treatments.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {addOns.map((addon) => (
               <div key={addon.id} className="text-center group">
