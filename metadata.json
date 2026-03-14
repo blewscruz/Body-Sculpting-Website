@@ -1,0 +1,7 @@
+{
+  "name": "Sculpt & Glow Studio",
+  "description": "A premium, private body sculpting and lymphatic drainage studio offering exclusive VIP treatments including Cavitation, Wood Therapy, and Post-Op care.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
